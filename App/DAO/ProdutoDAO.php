@@ -116,7 +116,7 @@ class ProdutoDAO
         $stmt->bindValue(1, $id);
         $stmt->execute();
 
-        return $stmt->fetchObject("ProdutoModel"); // Retornando um objeto específico PessoaModel
+        return $stmt->fetchObject("App\Model\ProdutoModel"); // Retornando um objeto específico PessoaModel
     }
 
     /**

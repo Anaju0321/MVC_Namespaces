@@ -114,7 +114,7 @@ class CategoriaDAO
         $stmt->bindValue(1, $id);
         $stmt->execute();
 
-        return $stmt->fetchObject("CategoriaModel"); // Retornando um objeto específico PessoaModel
+        return $stmt->fetchObject("App\Model\CategoriaModel"); // Retornando um objeto específico PessoaModel
     }
 
 /**

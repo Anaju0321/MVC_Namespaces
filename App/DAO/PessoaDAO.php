@@ -133,7 +133,7 @@ class PessoaDAO
         $stmt->bindValue(1, $id);
         $stmt->execute();
 
-        return $stmt->fetchObject("PessoaModel"); // Retornando um objeto específico PessoaModel
+        return $stmt->fetchObject("App\Model\PessoaModel"); // Retornando um objeto específico PessoaModel
     }
 
 /**
