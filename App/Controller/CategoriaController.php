@@ -9,7 +9,7 @@ use App\Model\CategoriaModel;
 /**
  * Classes Controller recebem requisições e decidem quam view será direcionada
  */
-class CategoriaController 
+class CategoriaController extends Controller
 {
     /**
      * métodos index devolvem uma View.
@@ -21,7 +21,7 @@ class CategoriaController
         $model = new CategoriaModel();
         $model->getAllRows();
 
-        include 'View/modules/Categorias/ListaCategorias.php';
+        parent::render('Categorias/ListaCategorias', $model);
     }
 
    /**
@@ -38,7 +38,7 @@ class CategoriaController
         
         //var_dump( $model); -- auxilia a verificar o codigo e os erros   
 
-        include 'View/modules/Categorias/FormCategorias.php';
+        parent::render('Categorias/FormCategorias', $model);
     }
 
     /**

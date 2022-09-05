@@ -7,7 +7,7 @@ use App\DAO\CategoriaDAO;
 
 
 
-class CategoriaModel
+class CategoriaModel extends Model
 {
     /**
      * Propriedades correspondentes aos campos da tabela no banco.
@@ -16,7 +16,7 @@ class CategoriaModel
 
     public $id, $descricao;
 
-    public $rows;
+    //public $rows;
 
 
     /**

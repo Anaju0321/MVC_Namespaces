@@ -12,7 +12,7 @@ use \PDO;
  * As classes DAO (Data Access Object) executam os codigos junto da execução do banco de dados (pode acessa-lo).
  */
 
-class CategoriaDAO
+class CategoriaDAO extends DAO
 {
     /**
      * Atributo (ou Propriedade) da classe que armazena a conexão com o banco (link/via)
@@ -24,18 +24,14 @@ class CategoriaDAO
      * Método construtor, chamado quando se instancia uma classe, 
      * podendo abrir uma conexao com o banco.
      */
-    function __construct() 
+    public function __construct()
     {
-        // DSN (Data Source Name), onde ficam as especificações do acesso ao banco de dados
-         
-        $dsn = "mysql:host=localhost:3307;dbname=db_sistema";
-        $user = "root";
-        $pass = "etecjau";
-        
-        // conexão criada e armazenada na propriedade definida para ela.
-        $this->conexao = new PDO($dsn, $user, $pass);
+        /**
+         * Chamando o construtor da classe DAO, isto é, toda vez que chamos o consturo da classe DAO
+         * estamos fazendo a conexão com o banco de dados.
+         */
+        parent::__construct();       
     }
-
 
     /**
      * Método esta recebendo a model e pegando os dados referente a tabela para inserilos (insert)

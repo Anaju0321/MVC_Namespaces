@@ -16,7 +16,7 @@ use App\Model\ProdutoModel;
  * buscar algo no banco de dados), redirecionar o usuário de rota, ou mesmo,
  * chamar outra Controller.
  */
-class ProdutoController 
+class ProdutoController extends Controller
 {
     /**
      * Os métodos index serão usados para devolver uma View.
@@ -29,7 +29,8 @@ class ProdutoController
         $model = new ProdutoModel();
         $model->getAllRows();
 
-        include 'View/modules/Produto/ProdutoListar.php';
+        //include 'View/modules/Produto/ProdutoListar.php';
+        parent::render('Produto/ProdutoListar', $model);
     }
 
    /**
@@ -46,7 +47,8 @@ class ProdutoController
         
         //var_dump( $model); 
 
-        include 'View/modules/Produto/formProduto.php';
+        //include 'View/modules/Produto/formProduto.php';
+        parent::render('Produto/formProduto', $model);
     }
 
     /**

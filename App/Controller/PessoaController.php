@@ -13,7 +13,7 @@ use App\Model\PessoaModel;
  * buscar algo no banco de dados), redirecionar o usuário de rota, ou mesmo,
  * chamar outra Controller.
  */
-class PessoaController 
+class PessoaController extends Controller
 {
     /**
      * Os métodos index serão usados para devolver uma View.
@@ -25,7 +25,8 @@ class PessoaController
         $model = new PessoaModel();
         $model->getAllRows();
 
-        include 'View/modules/Pessoa/ListaPessoas.php';
+        //include 'View/modules/Pessoa/ListaPessoas.php';
+        parent::render('Pessoa/ListaPessoas', $model);
     }
 
    /**
@@ -42,7 +43,8 @@ class PessoaController
         
         //var_dump( $model);    
 
-        include 'View/modules/Pessoa/FormPessoa.php';
+        //include 'View/modules/Pessoa/FormPessoa.php';
+        parent::render('Pessoa/FormPessoa', $model);
     }
 
     /**

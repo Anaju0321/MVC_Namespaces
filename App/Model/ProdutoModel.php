@@ -7,7 +7,7 @@ use App\DAO\ProdutoDAO;
 
 
 
-class ProdutoModel
+class ProdutoModel extends Model
 {
     /**
      * Declaração das propriedades conforme campos da tabela no banco de dados.
@@ -16,7 +16,7 @@ class ProdutoModel
     public $estoque_min, $estoque_max;
     public $vencimento, $id_categoria;
 
-    public $rows;
+    //public $rows;
 
     /**
      * Declaração do método save que chamará a DAO para gravar no banco de dados

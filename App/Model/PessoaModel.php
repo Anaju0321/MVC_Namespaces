@@ -7,7 +7,7 @@ use App\DAO\PessoaDAO;
 
 
 
-class PessoaModel
+class PessoaModel extends Model
 {
     /**
      * Declaração das propriedades conforme campos da tabela no banco de dados.
@@ -18,7 +18,7 @@ class PessoaModel
     public $data_nascimento, $email;
     public $telefone, $endereco;
 
-    public $rows;
+    //public $rows;
 
 
     /**
