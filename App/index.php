@@ -5,6 +5,8 @@ $uri_parse = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 //echo $uri_parse;
 //echo "<hr />";
 
+include 'config.php';
+
 //incluindo todas os arquivos da controller que irão direcionar as views (rotas)
 include 'Autoload.php';
 

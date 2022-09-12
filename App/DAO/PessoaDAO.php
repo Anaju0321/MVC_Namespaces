@@ -14,13 +14,7 @@ use \PDO;
 
 class PessoaDAO extends DAO
 {
-    /**
-     * Atributo (ou Propriedade) da classe destinado a armazenar o link (vínculo aberto)
-     * de conexão com o banco de dados.
-     */
-    private $conexao;
-
-
+ 
     /**
      * Método construtor, sempre chamado na classe quando a classe é instanciada.
      * Exemplo de instanciar classe (criar objeto da classe):

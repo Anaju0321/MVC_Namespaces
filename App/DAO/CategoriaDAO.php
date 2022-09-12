@@ -14,11 +14,7 @@ use \PDO;
 
 class CategoriaDAO extends DAO
 {
-    /**
-     * Atributo (ou Propriedade) da classe que armazena a conexão com o banco (link/via)
-     */
-    private $conexao;
-
+    
 
     /**
      * Método construtor, chamado quando se instancia uma classe, 
