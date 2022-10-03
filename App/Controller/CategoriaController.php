@@ -16,6 +16,8 @@ class CategoriaController extends Controller
      */
     public static function index() 
     {
+        parent::isAuthenticated();
+
        //include 'Model/CategoriaModel.php'; // incluindo a model.
         
         $model = new CategoriaModel();

@@ -15,6 +15,7 @@ use App\Controller\
     CategoriaController,
     PessoaController,
     ProdutoController,
+    LoginController,
 
 };
 
@@ -23,10 +24,27 @@ use App\Controller\
 include 'Controller/PessoaController.php';
 include 'Controller/ProdutoController.php';
 include 'Controller/CategoriaController.php';
+include 'Controller/LoginController.php';
 
 //vai realizar as tentativas para direcinar a rota pedida
 switch($uri_parse)
 {
+
+    case '/login':
+        LoginController::index();
+    break;
+
+    case '/login/auth':
+        LoginController::auth();
+    break;
+
+    case '/logout':
+        LoginController::logout();
+    break;
+
+
+
+
     case '/pessoa':
         PessoaController::index();
     break;

@@ -23,6 +23,7 @@ class ProdutoController extends Controller
      */
     public static function index() 
     {
+        parent::isAuthenticated();
     
         //include 'Model/ProdutoModel.php'; 
 

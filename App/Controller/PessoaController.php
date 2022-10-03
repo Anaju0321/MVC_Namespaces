@@ -20,6 +20,8 @@ class PessoaController extends Controller
      */
     public static function index() 
     {
+        parent::isAuthenticated();
+
         //include 'Model/PessoaModel.php'; // inclusão do arquivo model.
         
         $model = new PessoaModel();
