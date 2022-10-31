@@ -11,17 +11,12 @@ use App\DAO\LoginDAO;
  */
 class LoginModel extends Model
 {
-    /**
-     * Declaração das propriedades conforme campos da tabela no banco de dados.
-     * para saber mais sobre Propriedades de Classe, leia: https://www.php.net/manual/pt_BR/language.oop5.properties.php
-     */
+
     public $id, $nome, $email, $senha;
 
 
-    /**
-     * Declaração do método save que chamará a DAO para gravar no banco de dados
-     * o model preenchido.
-     */
+
+     
     public function autenticar()
     {
         $dao = new LoginDAO();
@@ -33,4 +28,31 @@ class LoginModel extends Model
         else
             null;
     }
+
+    public function save()
+    {
+      
+
+        $dao = new LoginDAO();
+
+        
+        if(empty($this->id)) 
+        {
+            
+            $dao->insert($this);
+        } else {
+            $dao->update($this); 
+        }
+    }
+
+    public function delete(int $id)
+    {
+        
+
+        $dao = new LoginDAO();
+
+        $dao->delete($id);
+    }
+
+
 }

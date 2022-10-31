@@ -56,4 +56,22 @@ class LoginController extends Controller
 
         parent::isAuthenticated();
     }
+
+
+    public static function save() {
+
+       
+        $login = new LoginModel();
+
+        $login->id = $_POST['id'];     
+        $login->nome = $_POST['nome'];
+        $login->email = $_POST['email'];
+        $login->senha = $_POST['senha'];
+
+
+        $login->save();  // método save sendo chamado (model).
+
+        header("Location: /login"); // mandando para outra rota.
+    }
+
 }
